@@ -14,6 +14,8 @@ const desktopLinks = [
 const TermsPage: NextPage = () => {
   const router = useRouter()
 
+  const { otherPageLinks } = config
+
   return (
     <div className="h-screen bg-center bg-repeat-x bg-cover bg-bubble">
       <SEO
@@ -23,6 +25,7 @@ const TermsPage: NextPage = () => {
 
       <Navigation
         desktopLinks={desktopLinks}
+        mobileLinks={otherPageLinks}
         action={
           <></>
           // <Link href="/minting" passHref>
@@ -39,7 +42,7 @@ const TermsPage: NextPage = () => {
             <Image src="/yubba-world-1line.png" layout="fill" objectFit="contain" alt="Yubba World" />
           </div>
 
-          <div className="absolute items-center hidden align-middle top-60 left-40 md:block ">
+          {/* <div className="absolute items-center hidden align-middle top-60 left-40 md:block ">
             <Button variant="white" size="large" style={{ justifyContent: "center" }} block onClick={() => router.back()}>
               <div className="w-[80px] font-normal grid grid-cols-2">
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -48,22 +51,26 @@ const TermsPage: NextPage = () => {
                 Back
               </div>
             </Button>
+          </div> */}
+
+          <div className="flex flex-row items-center w-full">
+            <div className="">
+              <Button variant="white" style={{ justifyContent: "center" }} block onClick={() => router.back()}>
+                <div className="w-[80px] font-normal grid grid-cols-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                  </svg>
+                  Back
+                </div>
+              </Button>
+            </div>
+
+            <div className="flex flex-1">
+              <H1 className="text-center" style={{ marginTop: '40px', marginBottom: '48px' }}>
+                Terms & Conditions
+              </H1>
+            </div>
           </div>
-
-          {/* <div className="flex">
-            <Button variant="white" size="large" style={{ justifyContent: "center" }} block>
-              <div className="w-[80px] font-normal grid grid-cols-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                Back
-              </div>
-            </Button> */}
-
-            <H1 className="text-center" style={{ marginTop: '40px', marginBottom: '48px' }}>
-              Terms & Conditions
-            </H1>
-          {/* </div> */}
 
           <p className="font-bold text-secondary">
             Last updated on 10th Oct, 2021

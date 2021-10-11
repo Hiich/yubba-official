@@ -14,6 +14,7 @@ import {
   MyWalletPopup, 
   Navigation 
 } from '@/components'
+import config from '@/modules/config'
 
 const desktopLinks = [
   { name: 'Minting', href: '/minting' },
@@ -23,6 +24,8 @@ const MintingPage: NextPage = () => {
   const [showConnect, setConnect] = useState(false)
   const [showWallet, setShowWallet] = useState(false)
   const [myWallet, setMyWallet] = useState(false)
+
+  const { otherPageLinks } = config
 
   // === demo purpose - start
   const router = useRouter()
@@ -76,6 +79,7 @@ const MintingPage: NextPage = () => {
 
       <Navigation 
         desktopLinks={desktopLinks} 
+        mobileLinks={otherPageLinks}
         action={
           !myWallet 
             ? <ButtonConnectWallet

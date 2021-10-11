@@ -11,7 +11,7 @@ const desktopLinks = [
 ]
 
 const IndexPage: NextPage = () => {
-  const { gallery } = config
+  const { gallery, otherPageLinks } = config
 
   return (
     <div className="h-screen bg-center bg-repeat-x bg-cover bg-bubble">
@@ -22,6 +22,7 @@ const IndexPage: NextPage = () => {
 
       <Navigation 
         desktopLinks={desktopLinks} 
+        mobileLinks={otherPageLinks}
         action={
                     <></>
           // <Link href="/minting" passHref>

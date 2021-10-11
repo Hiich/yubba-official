@@ -30,10 +30,10 @@ const IndexPage: NextPage = () => {
     <>
       <SEO
         title="Unique NFT collection"
-        description="Yubba World is a collection of randomly generated digital collectibles of various rarities living on the Ethereum blockchain as ERC-721.10,000 unique characters of staggering variety"
+        description="Yubba World is a collection of randomly generated digital collectibles of various rarity living on the Ethereum blockchain as ERC-721.10,000 unique characters of staggering variety"
       />
 
-      <Navigation
+      <Navigation      
         action={
                     <></>
           // <Link href="/minting" passHref>
@@ -52,7 +52,6 @@ const IndexPage: NextPage = () => {
         <CollectionPreview />
 
         <TraitRarity />
-
 
         <Community />
 
