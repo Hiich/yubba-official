@@ -6,7 +6,7 @@ export const config = {
   env: process.env.NODE_ENV,
   app: {
     name: process.env.NEXT_PUBLIC_APP_NAME || 'Yubba',
-    url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
+    url: process.env.NEXT_PUBLIC_APP_URL || 'https://github.com/Hiich/yubba-official/',
   },
   mainPageLinks: [
     { name: 'The collection', href: '#the-collection' },
