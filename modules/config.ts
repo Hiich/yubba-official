@@ -8,7 +8,15 @@ export const config = {
     name: process.env.NEXT_PUBLIC_APP_NAME || 'Yubba',
     url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   },
-  nav: [
+  mainPageLinks: [
+    { name: 'The collection', href: '#the-collection' },
+    { name: 'Collection preview', href: '/preview' },
+    { name: 'Traits & Rarities', href: '#traits-rarity' },
+    { name: 'Community', href: '#community' },
+    { name: 'Roadmap', href: '#roadmap' },
+    { name: 'Team', href: '#team' },
+  ],
+  otherPageLinks: [
     { name: 'The collection', href: '/#the-collection' },
     { name: 'Collection preview', href: '/preview' },
     { name: 'Traits & Rarities', href: '/#traits-rarity' },
@@ -24,9 +32,9 @@ export const config = {
   founders: [
     {
       imageUrl: '/profile/profile-vic.png',
-      imageAlt: 'Vic Co-Founder Yubba World',
+      imageAlt: 'Vic Founder Yubba World',
       name: 'Vic',
-      job: 'Creator/Artist',
+      job: 'Artist',
       email: 'hello@yubbaworld.net',
       twitter: 'https://twitter.com/v_xtra',
     },
@@ -34,7 +42,7 @@ export const config = {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Co-founder Yubba World',
       name: 'Hich',
-      job: 'Chief Engineer',
+      job: 'Engineer',
       email: 'admin@yubbaworld.net',
       twitter: 'https://twitter.com/HichamBenhima',
     }
