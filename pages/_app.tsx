@@ -18,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         additionalLinkTags={[
           {
             rel: 'icon',
-            href: `${config.app.url}/favicon.png`,
+            href: `../../public/favicon.png`,
           },
         ]}
       />
