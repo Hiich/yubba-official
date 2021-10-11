@@ -34,7 +34,7 @@ export const config = {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Co-founder Yubba World',
       name: 'Hich',
-      job: 'Tech Lead',
+      job: 'Chief Engineer',
       email: 'admin@yubbaworld.net',
       twitter: 'https://twitter.com/HichamBenhima',
     }
