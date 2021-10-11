@@ -19,7 +19,7 @@ const TermsPage: NextPage = () => {
   return (
     <div className="h-screen bg-center bg-repeat-x bg-cover bg-bubble">
       <SEO
-        title="Opening soon"
+        title="Terms & conditions"
         description="Yubba World is a collection of randomly generated digital collectibles of various rarity living on the Ethereum blockchain as ERC-721.10,000 unique characters of staggering variety"
       />
 
@@ -41,37 +41,28 @@ const TermsPage: NextPage = () => {
           <div className="relative h-24 mx-auto mb-8">
             <Image src="/yubba-world-1line.png" layout="fill" objectFit="contain" alt="Yubba World" />
           </div>
-
-          {/* <div className="absolute items-center hidden align-middle top-60 left-40 md:block ">
-            <Button variant="white" size="large" style={{ justifyContent: "center" }} block onClick={() => router.back()}>
-              <div className="w-[80px] font-normal grid grid-cols-2">
-                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                Back
-              </div>
+        </Container>
+                
+        <div className="flex flex-row items-center w-full px-4 mx-auto max-w-7xl">
+          <div className="hidden w-24 md:flex">
+            <Button variant="white" style={{ fontWeight: 400, border: '1px solid #cfcfcf', justifyContent: "center" }} block onClick={() => router.back()}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 mr-2 fill-current" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+              Back
             </Button>
-          </div> */}
-
-          <div className="flex flex-row items-center w-full">
-            <div className="">
-              <Button variant="white" style={{ justifyContent: "center" }} block onClick={() => router.back()}>
-                <div className="w-[80px] font-normal grid grid-cols-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                  </svg>
-                  Back
-                </div>
-              </Button>
-            </div>
-
-            <div className="flex flex-1">
-              <H1 className="text-center" style={{ marginTop: '40px', marginBottom: '48px' }}>
-                Terms & Conditions
-              </H1>
-            </div>
           </div>
 
+          <div className="flex justify-center flex-1 flex-grow">
+            <H1 className="text-center text-secondary" style={{ marginTop: '40px', marginBottom: '40px' }}>
+              Terms & Conditions
+            </H1>
+          </div>
+
+          <div className="hidden w-32 md:flex"></div>
+        </div>
+  
+        <Container>
           <p className="font-bold text-secondary">
             Last updated on 10th Oct, 2021
           </p>
