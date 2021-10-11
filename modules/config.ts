@@ -34,7 +34,7 @@ export const config = {
       imageUrl: '/profile/profile-vic.png',
       imageAlt: 'Vic Founder Yubba World',
       name: 'Vic', 
-      job: 'Artist',
+      job: 'Creator / Artist',
       email: 'hello@yubbaworld.net',
       twitter: 'https://twitter.com/v_xtra',
     },
@@ -42,7 +42,7 @@ export const config = {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Co-founder Yubba World',
       name: 'Hich',
-      job: 'Engineer',
+      job: 'Chief Engineer',
       email: 'admin@yubbaworld.net',
       twitter: 'https://twitter.com/HichamBenhima',
     }
