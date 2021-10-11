@@ -1,0 +1,88 @@
+.Roadmap {
+    width: 373.5px;
+    height: 21px;
+    margin: 2 48.5px 15.5px 2px;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.31;
+    letter-spacing: 9px;
+    color: #473c41;
+  }
+
+  .RoadmapOutline {
+    width: 422px;
+    height: 69.5px;
+    margin: 15.5px 0 30.5px 0.5px;
+    font-family: Roboto;
+    font-size: 11px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.45;
+    letter-spacing: normal;
+    color: #473c41;
+  }
+  
+  .Rectangle{
+    width: 105px;
+    height: 24px;
+    margin: 0px 0px 5px 0px;
+    padding: 1px 1px 0 1px;
+    border-radius: 19.5px;
+    background-color: #473c41;
+  }
+  .dateContenair {
+    
+    width: 93.5px;
+    height: 20px;
+    vertical-align: middle;
+    text-align: left;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+
+  .ConceptionRamping {
+    width: 290px;
+    height: 17px;
+    margin: 15px 83px 7px 8.5px;
+    font-family: Roboto;
+    font-size: 13px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.7;
+    letter-spacing: normal;
+    color: #473c41;
+  }
+  .ConceptionRampingBold {
+    font-weight: bold;
+  }
+  .Line {
+    width: 100%;
+    height: 1px;
+    border-top: dotted 2px #a6a5a5;
+  }
+  .LineIn {
+    position: absolute;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-left: 3px;
+    width: 50px;
+    height: 40px;
+    border-top: dotted 2px #db5295;
+    border-left: dotted 2px #db5295;
+  }
+
+
+
+ 

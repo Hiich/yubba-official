@@ -1,0 +1,59 @@
+
+
+@keyframes bounceG {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  50% {
+    
+    transform: translateY(-30%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+.bounceGreen{
+    position: absolute;
+left:170px;
+animation: bounceG 3s infinite;
+}
+.bounceGreenMobile{
+  position: absolute;
+left:100px;
+animation: bounceG 3s infinite;
+}
+.bounceRed{
+  position: absolute;
+  top:90px;
+  left:70px;
+  animation: bounceR 3s infinite;
+}
+@keyframes bounceR {
+
+  0%, 100% {
+    transform: translateY(-60%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    
+  }
+}
+.bouncePurple{
+  position: absolute;
+  left:-30px;
+  top:20px;
+  animation: bounceP 2s infinite;
+}
+@keyframes bounceP {
+  0%, 100% {
+   
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  50% {
+    transform: translateY(-50%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}

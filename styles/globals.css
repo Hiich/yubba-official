@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fr.allfont.net/cache/css/roboto-bold.css'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+  @font-face {
+    font-family: 'Roboto Bold';
+    src: url("/fonts/roboto-bold.woff") format("woff"),
+        url("/fonts/robot-bold.ttf") format("ttf");
+  }
+
+  body {
+    @apply antialiased bg-[#faeef3];
+  }
+}

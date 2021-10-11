@@ -1,0 +1,75 @@
+.btn {
+  @apply relative inline-flex items-center justify-start space-x-2 transition duration-75 ease-in-out rounded-full;
+  @apply focus:outline-none;
+  
+  &:disabled,
+  &.disabled {
+    @apply cursor-not-allowed opacity-70;
+  }
+
+  /* BLOCK */
+
+  &.btn-block {
+    @apply flex w-full;
+    /* @apply justify-center !important; */
+  }
+
+  /* SIZE */
+
+  &.btn-regular {
+    @apply h-8 px-3 text-base; /* 32px */
+    > svg {
+      @apply w-4 h-4 fill-current;
+    }
+  }
+
+  &.btn-large {
+    @apply h-10 px-4 text-base; /* 40px */
+    > svg {
+      @apply w-6 h-6 fill-current;
+    }
+  }
+
+  /* VARIANT */
+
+  &.btn-default {
+    @apply text-gray-700 bg-transparent hover:bg-primary hover:text-white;
+
+    &.active {
+      @apply text-white bg-primary;
+    }
+  }
+
+  &.btn-primary {
+    @apply font-semibold tracking-wider text-white border border-transparent bg-primary hover:bg-primary-dark;
+    
+    &.active {
+      @apply bg-primary-dark;
+    }
+  }
+
+
+  &.btn-secondary {
+    @apply tracking-wider text-gray-500 bg-gray-200 border border-transparent hover:text-gray-600 hover:bg-gray-300;
+
+    &.active {
+      @apply bg-gray-300;
+    }
+  }
+  
+  &.btn-white {
+    @apply font-semibold tracking-wider bg-white border border-transparent text-secondary hover:text-white hover:bg-primary;
+
+    &.active {
+      @apply bg-gray-300;
+    }
+  }
+
+  &.btn-navbar {
+    @apply justify-between text-white border border-transparent hover:bg-primary focus:bg-primary focus:outline-none;
+
+    &.active {
+      @apply text-primary;
+    }
+  }
+}
