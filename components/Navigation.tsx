@@ -14,7 +14,12 @@ type Props = {
   action: ReactNode
 }
 
-export default function Navigation({ action, mobileLinks = config.nav, desktopLinks = config.nav, socials = config.socials }: Props) {  
+export default function Navigation({ 
+  action, 
+  mobileLinks = config.mainPageLinks, 
+  desktopLinks = config.mainPageLinks, 
+  socials = config.socials 
+}: Props) {  
   const [open, setOpen] = useState(false)
 
   const onClickMobileLink = () => {
