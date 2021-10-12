@@ -69,7 +69,7 @@ function RowRarity({ category, number }: { category: string, number: string }) {
 export default function TraitsRarity() {
   return (
     <>
-      <section className="bg-[#b2c2d3] h-[250px] md:h-[300px] py-8" id="#traits-rarity">
+      <section className="bg-[#b2c2d3] h-[250px] md:h-[300px] py-8">
         <Container>        
           <div className="relative clear-left">
             {/* mobile version of Yubbas */}
@@ -99,18 +99,19 @@ export default function TraitsRarity() {
 
       <section className="bg-[#b2c2d3]">
         <Container>
-          <div className="rounded pt-10 pb-10  px-16 w-full mb-36 md:w-[450px]" style={{ backgroundImage: 'linear-gradient(152deg, #473c41 10%, #342c30 79%)' }}>            
+          <div className="rounded pt-10 pb-10  px-16 w-full mb-28 md:w-[450px]" style={{ backgroundImage: 'linear-gradient(152deg, #473c41 10%, #342c30 79%)' }}>            
             <H2 className="text-white font-title">TOKEN INFO</H2>
             <RowTokenInfo info="10,000 Yubbas Available" />
             <RowTokenInfo info="ERC-721 Contract" />
-            <RowTokenInfo info="MetaMask required for activation"/>
-            <RowTokenInfo info="4% Yubba tax on secondary market sales used for the up-keeping of Yubba World" border={false}/>
+            <RowTokenInfo info="MetaMask required for minting" />
+            <RowTokenInfo info="4% Yubba tax on secondary market sales used for the up-keeping of Yubba World" border={false} />            
           </div>
 
+          <div id="#traits-rarity" className="pt-16"></div>
           <H1 className="text-title text-secondary">Traits & Rarities</H1>
 
           <div className="mt-8 mb-10 text-secondary">
-            Yubba characters have been designed with more than a hundred different traits and attributes and generated from 5-6 composition layers.                            
+            Yubba characters have been designed with more than a hundred different traits and attributes and generated from 5-6 composition layers.
           </div>
 
           <div className="flex flex-wrap w-full space-x-0 space-y-20 sm:pt-10 sm:space-y-0 sm:flex-nowrap sm:space-x-20 text-secondary">                                                                
