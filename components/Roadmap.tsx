@@ -45,10 +45,43 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                                         </div>
                                         <div className="mt-8">
                                             <span className="mt-10 font-lg">
-                                                <span className="font-title text-secondary">Conception</span> (ramping up design, tech and community acquisition)
+                                                <span className="font-title text-secondary">Creation</span> 
                                             </span>
                                             <div className="mt-5 text-secondary">
-                                            The goal is to make our first drop as amazing as possible. We are just putting the final touches to design and making sure that tech, production and the activation process are working smoothly.                                            </div>
+Dreaming up an NFT project that is fun, unique and profitable for investors . Designing the Yubba details you will come to know and love, building a secure and reliable infrastructure for Yubba World.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </li>
+                    <li >
+                        <div className="relative pb-3">
+                            <span className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500" aria-hidden="true" />
+                            <div className="relative flex items-start space-x-3">
+                                <div>
+                                    <div className="relative px-3 top-1">
+                                        <div className="flex items-center justify-center w-4 h-4 bg-pink-500 rounded-full ring-white">
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="min-w-0  pb-1.5 ">
+                                    <div className="">
+                                        <div className={styles.Rectangle}>
+                                            <div className={styles.dateContenair}>Sep 2021</div>
+                                        </div>
+                                        <div className="mt-8">
+                                            <span className="mt-10 font-lg">
+                                                <span className="font-title text-secondary">Community</span> 
+                                            </span>
+                                            <div className="mt-5 text-secondary">
+                                                Spreading the word through the grapevine
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -91,10 +124,11 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                                     <div className="grid grid-cols-2 ">
                                         <div className={styles.Rectangle}>
                                             <div className={styles.dateContenair}>Oct 2021</div>
-
                                         </div>
                                         <span className="ml-2 font-title text-secondary">Launch</span>
-
+                                        <div className="mt-5 text-secondary">
+                                                Early Bird opportunity for investing in your own Yubba!
+                                        </div>
                                     </div>
                                 </div>
 
