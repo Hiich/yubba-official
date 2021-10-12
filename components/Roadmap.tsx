@@ -493,7 +493,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                           </span>
                         </div>
                         <span className="w-full ">
-                          <br /> Bolster your Yubba with added functionality for
+                          <br /> Boost your Yubba with added functionality for
                           the upcoming Yubba Arena. More details coming…
                           <br />{" "}
                         </span>
