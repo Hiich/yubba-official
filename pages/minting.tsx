@@ -3,18 +3,19 @@ import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { NextSeo as SEO } from 'next-seo'
 import { useRouter } from 'next/router'
-import { 
+import styles from './styles.module.css'
+
+import {
   Button,
-  ButtonConnectWallet, 
-  ButtonWaiting, 
-  ButtonWallet, 
-  ConnectWalletPopup, 
-  Container, 
-  MintingCard, 
-  MyWalletPopup, 
-  Navigation 
+  ButtonConnectWallet,
+  ButtonWaiting,
+  ButtonWallet,
+  ConnectWalletPopup,
+  Container,
+  MintingCard,
+  MyWalletPopup,
+  Navigation
 } from '@/components'
-import config from '@/modules/config'
 
 const desktopLinks = [
   { name: 'Minting', href: '/minting' },
@@ -24,8 +25,6 @@ const MintingPage: NextPage = () => {
   const [showConnect, setConnect] = useState(false)
   const [showWallet, setShowWallet] = useState(false)
   const [myWallet, setMyWallet] = useState(false)
-
-  const { otherPageLinks } = config
 
   // === demo purpose - start
   const router = useRouter()
@@ -49,7 +48,7 @@ const MintingPage: NextPage = () => {
 
   function hideConnectWallet() {
     setConnect(false)
-  }  
+  }
 
   function onClickDisconnectWallet() {
     setMyWallet(false)
@@ -75,18 +74,17 @@ const MintingPage: NextPage = () => {
       <SEO
         title="Minting"
         description="Yubba World is a collection of randomly generated digital collectibles of various rarity living on the Ethereum blockchain as ERC-721.10,000 unique characters of staggering variety"
-      />      
+      />
 
-      <Navigation 
-        desktopLinks={desktopLinks} 
-        mobileLinks={otherPageLinks}
+      <Navigation
+        desktopLinks={desktopLinks}
         action={
-          !myWallet 
+          myWallet
             ? <ButtonConnectWallet
-               onClick={showConnectWallet} />          
+              onClick={showConnectWallet} />
             : <ButtonWallet
-                onClickMyWallet={showMyWallet}
-                onClickDisconnectWallet={onClickDisconnectWallet} />
+              onClickMyWallet={showMyWallet}
+              onClickDisconnectWallet={onClickDisconnectWallet} />
         }
       />
 
@@ -112,35 +110,81 @@ const MintingPage: NextPage = () => {
             </div>
           </MintingCard> */}
 
+          {/* minting card form }
           <MintingCard>
-            <p className="mb-6 text-xl text-left text-secondary">
+            <p className="mb-6 -mt-6 text-xl font-bold text-left md:mt-0 text-secondary">
               How many Yubbas would you like?
             </p>
-            <div className="w-full text-right md:w-1/2">
-              <input type="number" />
-              <p className="mb-2 text-xs font-thin">
-                9,500 remaining <br />
-                Price per Yubba: 0.05 ETH
-              </p>
+            <div className="w-full pb-6 text-right " style={{ borderBottom: "dotted 0.3px #a6a5a5" }}>
+              <div className="w-full -ml-0 h-9" style={{ justifyContent: "center" }}>
+                <div className={styles.selectdiv} >
+                  <label>
+                    <select >
+                      <option selected> 1 </option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                      <option>6</option>
+                      <option>7</option>
+                      <option>8</option>
+                      <option>9</option>
+                      <option>10</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div>
+                <p className="mt-4 mb-2 text-xs font-thin text-right text-secondary">
+                  9,500 remaining <br />
+                  Price per Yubba: 0.05 ETH
+                </p>
+              </div>
+
+            </div>
+            <div className="flex mt-3">
+              <div className="flex-1 text-2xl text-left font-title">Total</div>
+              <div className="flex-1 text-2xl text-right font-title">1.5 ETH <Image src="/icon-eth.png" layout="fixed" width={13} height={20} alt="Eth" />
+              </div>
             </div>
             <div className="w-full mx-auto mt-6 md:w-3/4">
-              <Button variant="primary" block>
+              <Button variant="primary" className="px-6 py-3 rounded-full " style={{ justifyContent: "center", fontWeight: "lighter", height: "40px", color: "#fffeff" }} block>
                 Get me some Yubbas
               </Button>
             </div>
-          </MintingCard>          
-
+          </MintingCard>
+          
+          {/* minting card for waitting /}
+           <MintingCard>
+            <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
+            Transfering Yubbas <br/> to your wallet
+            </div>
+            <div className="h-[84px] relative mx-aut ">
+             <Image src="/loader.gif" layout="fill" objectFit="contain" alt="Yubba World" />
+            </div>
+          </MintingCard>
+          {/* minting card for thankyou */}
+           
+          <MintingCard>
+            <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
+              Transfer complete <br />Yubba dubba dooo… 🎉
+            </div>
+            <div className="font-title -mb-5 font-bold text-2xl  md:text-3xl uppercase tracking-[6px] md:tracking-[13px] ">
+              Thank you
+            </div>
+          </MintingCard>
+          {/**/}
         </Container>
       </section>
 
-      <MyWalletPopup 
+      <MyWalletPopup
         showPopup={showWallet}
         closePopup={hideMyWallet}
         walletAddress="Oxc7g2kl6678hjs1ncgh3g"
         onDisconnectWallet={onClickDisconnectWallet}
       />
 
-      <ConnectWalletPopup 
+      <ConnectWalletPopup
         showPopup={showConnect}
         closePopup={hideConnectWallet}
         onClickMetamask={onConnectMetamask}
@@ -148,9 +192,9 @@ const MintingPage: NextPage = () => {
         onClickTrustWallet={onConnectTustWallet}
       />
 
-      <section className="w-full py-8 mt-auto md:absolute md:bottom-0">
-        <p className="text-center text-secondary">
-          &copy; Copyright Yubba World 2021, All rights reserves
+      <section className="w-full py-8 -mt-10 md:mt-auto md:absolute md:bottom-0">
+        <p className="text-xs text-center text-secondary">
+          &copy; Copyright Yubba World 2021, All rights reserved
         </p>
       </section>
     </div>
