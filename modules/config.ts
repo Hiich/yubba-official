@@ -5,8 +5,8 @@ import InstagramIcon from '@/public/icon-instagram.svg'
 export const config = {
   env: process.env.NODE_ENV,
   app: {
-    name: process.env.NEXT_PUBLIC_APP_NAME || 'Yubba',
-    url: process.env.NEXT_PUBLIC_APP_URL || 'https://github.com/Hiich/yubba-official/public',
+    name: process.env.NEXT_PUBLIC_APP_NAME || 'Yubba World™️ Official Site - NFT Collectibles',
+    url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   },
   mainPageLinks: [
     { name: 'The collection', href: '#the-collection' },
@@ -33,8 +33,8 @@ export const config = {
     {
       imageUrl: '/profile/profile-vic.png',
       imageAlt: 'Vic Founder Yubba World',
-      name: 'Vic', 
-      job: 'Creator / Artist',
+      name: 'Vic',
+      job: 'Creator/Artist',
       email: 'hello@yubbaworld.net',
       twitter: 'https://twitter.com/v_xtra',
     },
@@ -42,7 +42,7 @@ export const config = {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Co-founder Yubba World',
       name: 'Hich',
-      job: 'Chief Engineer',
+      job: 'Engineer',
       email: 'admin@yubbaworld.net',
       twitter: 'https://twitter.com/HichamBenhima',
     }
