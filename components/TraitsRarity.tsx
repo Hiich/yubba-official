@@ -103,7 +103,8 @@ export default function TraitsRarity() {
             <H2 className="text-white font-title">TOKEN INFO</H2>
             <RowTokenInfo info="10,000 Yubbas Available" />
             <RowTokenInfo info="ERC-721 Contract" />
-            <RowTokenInfo info="MetaMask required for activation" border={false}/>
+            <RowTokenInfo info="MetaMask required for activation"/>
+            <RowTokenInfo info="4% Yubba tax on secondary market sales used for the up-keeping of Yubba World" border={false}/>
           </div>
 
           <H1 className="text-title text-secondary">Traits & Rarities</H1>
