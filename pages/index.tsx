@@ -12,6 +12,7 @@ import {
   SeriesOne,
   Roadmap,
   Community,
+  Presale, 
   Team,
   TraitRarity,
   Button,
