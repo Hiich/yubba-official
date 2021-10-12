@@ -133,7 +133,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                             Community
                           </span>
                           <div className="mt-5 text-secondary">
-                            Spreading the word through the grapevine
+                            Spreading the word through the metaverse. We begin to build our Yubba community.
                           </div>
                         </div>
                       </div>
@@ -199,8 +199,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                             Launch
                           </span>
                           <div className="mt-5 text-secondary">
-                            Early Bird opportunity for investing in your own
-                            Yubba!
+                            Early Bird opportunity for investing in your Yubba!
                           </div>
                         </div>
                       </div>
@@ -488,7 +487,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       <div className="">
                         <div>
                           <span className="font-title text-secondary">
-                            Added utilities (extra capabilities, accessories,
+                            Added utilities (extra capabilities, accessories and
                             weapons)
                           </span>
                         </div>
