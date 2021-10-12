@@ -488,13 +488,13 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       <div className="">
                         <div>
                           <span className="font-title text-secondary">
-                            Consumables drop (extra capabilities, accessories,
+                            Added utilities (extra capabilities, accessories,
                             weapons)
                           </span>
                         </div>
                         <span className="w-full ">
                           <br /> Boost your Yubba with added functionality for
-                          the upcoming Yubba Arena. More details coming…
+                          the upcoming game. More details coming…
                           <br />{" "}
                         </span>
                       </div>
