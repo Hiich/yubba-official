@@ -111,7 +111,7 @@ export default function TraitsRarity() {
           <H1 className="text-title text-secondary">Traits & Rarities</H1>
 
           <div className="mt-8 mb-10 text-secondary">
-            Yubba characters have been designed with more than a hundred different traits and attributes and generated from 5-6 composition layers.
+            Yubba characters have been designed with hundreds of different traits and attributes and generated from 5-6 composition layers.
           </div>
 
           <div className="flex flex-wrap w-full space-x-0 space-y-20 sm:pt-10 sm:space-y-0 sm:flex-nowrap sm:space-x-20 text-secondary">                                                                
