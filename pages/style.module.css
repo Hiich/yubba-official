@@ -1,0 +1,47 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+.selectdiv {
+    position: relative;
+    margin: auto;
+      
+  }
+  
+  .selectdiv:after {
+      content: '\f0d7';
+      font: normal normal normal 17px/1 FontAwesome;
+      color: #e74094;
+      right: 11px;
+      top: 6px;
+      height: 20px;
+      
+      padding: 8px 0px 0px 8px;
+
+      position: absolute;
+      pointer-events: none;
+  }
+  
+
+  
+  .selectdiv select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Add some styling */
+    border-radius: 9999px;
+    text-align : right;
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 33px;
+    border: solid 0.3px #cfcfcf;
+    float: right;
+    margin: 5px 0px;
+    padding: 0px 30px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: #473c41;
+    font-family: Roboto;
+    background-color: #ffffff;
+    background-image: none;
+    -ms-word-break: normal;
+    word-break: normal;
+  }
