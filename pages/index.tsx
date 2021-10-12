@@ -51,7 +51,7 @@ const IndexPage: NextPage = () => {
         <TraitRarity />
 
         <Community />
-<Presale />
+
         <Roadmap />
 
         <Team />
