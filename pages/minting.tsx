@@ -301,7 +301,9 @@ const MintingPage: NextPage = () => {
                       Total
                     </div>
                     <div className="flex-1 font-title text-2xl text-right">
-                      {(CONFIG.DISPLAY_COST * selectedValue).toFixed(1)}
+                      <span className="pr-1">
+                        {(CONFIG.DISPLAY_COST * selectedValue).toFixed(1)}
+                      </span>
                       <Image
                         src="/icon-eth.png"
                         layout="fixed"
