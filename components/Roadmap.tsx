@@ -433,26 +433,6 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="relative flex items-start space-x-0 ">
-                    <div className="z-10 ">
-                      <div className="relative px-4 top-2 ">
-                        <div className="flex items-center justify-center w-2 h-2 bg-white rounded-full ring-4 ring-pink-500"></div>
-                      </div>
-                    </div>
-
-                    <div className="min-w-0  py-1.5  pl-[60px] md:pl-20 ">
-                      <div>
-                        <div>
-                          <span className="font-title text-secondary">
-                            OpenSea verification
-                          </span>
-                        </div>
-                        <div className="w-full mt-2 ">
-                          Get Yubba World collection verified on OpenSea
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </div>
               </li>
               <li>
