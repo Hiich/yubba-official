@@ -7,6 +7,7 @@ export { default as Teammate } from './Teammate'
 
 // Complex components
 export { default as ButtonConnectWallet } from './ButtonConnectWallet'
+export { default as ButtonClaimNFT } from './ButtonClaimNFT'
 export { default as ButtonWaiting } from './ButtonWaiting'
 export { default as ButtonWallet } from './ButtonWallet'
 export { default as Presale } from './Presale'
