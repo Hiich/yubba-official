@@ -26,7 +26,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
 
           <div className="flow-root mt-10">
             <ul role="list" className="-mb-2">
-            <li  className="mt-12">
+              <li className="mt-12">
                 <div className="relative pb-3">
                   <span
                     className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500"
@@ -67,7 +67,10 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                             Creation
                           </span>
                           <div className="mt-5 text-secondary">
-                          Dreaming up an NFT project that is fun, unique and profitable for investors . Designing the Yubba details you will come to know and love, building a secure and reliable infrastructure for Yubba World.
+                            Dreaming up an NFT project that is fun, unique and
+                            profitable for investors . Designing the Yubba
+                            details you will come to know and love, building a
+                            secure and reliable infrastructure for Yubba World.
                           </div>
                         </div>
                       </div>
@@ -92,7 +95,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                   </div>
                 </div>
               </li>
-              <li  className="mt-12">
+              <li className="mt-12">
                 <div className="relative pb-3">
                   <span
                     className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500"
@@ -133,7 +136,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                             Community
                           </span>
                           <div className="mt-5 text-secondary">
-                            Spreading the word through the metaverse. We begin to build our Yubba community.
+                            Spreading the word through the grapevine
                           </div>
                         </div>
                       </div>
@@ -199,7 +202,8 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                             Launch
                           </span>
                           <div className="mt-5 text-secondary">
-                            Early Bird opportunity for investing in your Yubba!
+                            Early Bird opportunity for investing in your own
+                            Yubba!
                           </div>
                         </div>
                       </div>
@@ -429,6 +433,26 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       </div>
                     </div>
                   </div>
+                  <div className="relative flex items-start space-x-0 ">
+                    <div className="z-10 ">
+                      <div className="relative px-4 top-2 ">
+                        <div className="flex items-center justify-center w-2 h-2 bg-white rounded-full ring-4 ring-pink-500"></div>
+                      </div>
+                    </div>
+
+                    <div className="min-w-0  py-1.5  pl-[60px] md:pl-20 ">
+                      <div>
+                        <div>
+                          <span className="font-title text-secondary">
+                            OpenSea verification
+                          </span>
+                        </div>
+                        <div className="w-full mt-2 ">
+                          Get Yubba World collection verified on OpenSea
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </li>
               <li>
@@ -487,13 +511,13 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       <div className="">
                         <div>
                           <span className="font-title text-secondary">
-                            Added utilities (extra capabilities, accessories and
+                            Consumables drop (extra capabilities, accessories,
                             weapons)
                           </span>
                         </div>
                         <span className="w-full ">
-                          <br /> Boost your Yubba with added functionality for
-                          the upcoming game. More details coming…
+                          <br /> Bolster your Yubba with added functionality for
+                          the upcoming Yubba Arena. More details coming…
                           <br />{" "}
                         </span>
                       </div>
