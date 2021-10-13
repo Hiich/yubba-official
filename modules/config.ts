@@ -34,15 +34,15 @@ export const config = {
       imageUrl: '/profile/profile-vic.png',
       imageAlt: 'Vic Founder Yubba World',
       name: 'Vic',
-      job: 'Creator/Artist',
+      job: 'Creator / Artist',
       email: 'hello@yubbaworld.net',
       twitter: 'https://twitter.com/v_xtra',
     },
     {
       imageUrl: '/profile/profile-hicham.png',
-      imageAlt: 'Hich Co-founder Yubba World',
+      imageAlt: 'Hich Founder Yubba World',
       name: 'Hich',
-      job: 'Tech Lead',
+      job: 'Chief Engineer',
       email: 'admin@yubbaworld.net',
       twitter: 'https://twitter.com/HichamBenhima',
     }
@@ -51,7 +51,7 @@ export const config = {
     {
       imageUrl: '/profile/profile-manu.png',
       imageAlt: 'Manu Investor/Advisor Yubba World',
-      name: 'Manu',
+      name: 'The chancellor',
       badges: [
         '/badges/icon-coolcats-badge.png',
         '/badges/icon-deadfellaz-badge.png',
@@ -61,7 +61,7 @@ export const config = {
     {
       imageUrl: '/profile/profile-jeremy.png',
       imageAlt: 'Jeremy Investor/Advisor Yubba World',
-      name: 'Jeremy',  
+      name: 'The astronaut',  
       badges: [
         '/badges/icon-deadfellaz-badge.png',
       ]    
@@ -69,7 +69,7 @@ export const config = {
     {
       imageUrl: '/profile/profile-thomas.png',
       imageAlt: 'Thomas Investor/Advisor Yubba World',
-      name: 'Thomas',  
+      name: 'Laser King',  
       badges: [
         '/badges/icon-pudgypenguins-badge.png',
         '/badges/icon-coolcats-badge.png',
@@ -78,7 +78,7 @@ export const config = {
     {
       imageUrl: '/profile/profile-nate.png',
       imageAlt: 'Nate Investor/Advisor Yubba World',
-      name: 'Nate',     
+      name: 'The racer',     
       badges: [
         '/badges/icon-pudgypenguins-badge.png',
         '/badges/icon-deadfellaz-badge.png',
@@ -87,7 +87,7 @@ export const config = {
     {
       imageUrl: '/profile/profile-tom.png',
       imageAlt: 'Tom Investor/Advisor Yubba World',
-      name: 'Tom',  
+      name: 'The trooper',  
       badges: [
         '/badges/icon-coolcats-badge.png',
         '/badges/icon-toadbadge-badge.png',
@@ -96,7 +96,7 @@ export const config = {
       {
       imageUrl: '/profile/profile-max.png',
       imageAlt: 'Max Investor/Advisor Yubba World',
-      name: 'Max',  
+      name: 'The ranger',  
       badges: [
         '/badges/icon-pudgypenguins-badge.png',
         '/badges/icon-deadfellaz-badge.png',
