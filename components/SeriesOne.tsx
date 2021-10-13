@@ -22,9 +22,9 @@ export default function SeriesOne() {
           </H2>
         </div>
 
-        {/* <div className="w-full md:w-5/12">
+         <div className="w-full md:w-5/12">
             <Presale className="flex" />
-          </div> */}
+          </div> 
 
       </Container>
     </section>
