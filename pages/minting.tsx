@@ -395,7 +395,7 @@ const MintingPage: NextPage = () => {
         onClickTrustWallet={onConnectTustWallet}
       />
 
-      <section className="w-full py-8 md:-mt-10 md:mt-auto md:absolute md:bottom-0">
+      <section className="w-full py-8 m md:mt-auto   -mt-10">
         <p className="text-center text-secondary text-xs">
           &copy; Copyright Yubba World 2021, All rights reserved
         </p>
