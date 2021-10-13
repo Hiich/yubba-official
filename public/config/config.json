@@ -1,0 +1,18 @@
+{
+  "CONTRACT_ADDRESS": "0x6818DAe5505A13C3E7369bfA9E408AD8919C6D82",
+  "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x2b9c2B841B3f378A254A8bAA9477cEdC31eAc829",
+  "NETWORK": {
+    "NAME": "Ethereum",
+    "SYMBOL": "ETH",
+    "ID": 4
+  },
+  "NFT_NAME": "Yubba",
+  "SYMBOL": "Yubba",
+  "MAX_SUPPLY": 10,
+  "WEI_COST": 300000000000000000,
+  "DISPLAY_COST": 0.3,
+  "GAS_LIMIT": 285000,
+  "MARKETPLACE": "Opensea",
+  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/yubbaworld",
+  "SHOW_BACKGROUND": true
+}
