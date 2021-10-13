@@ -9,18 +9,19 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <DefaultSeo
-        defaultTitle={config.app.name}
-        titleTemplate={`${config.app.name} - %s`}
+        defaultTitle={`Yubba World™️ Official Site - NFT Collectibles`}
+        titleTemplate={`%s - Yubba World Official Site - NFT Collectibles`}
+        description="Yubba World is a collection of randomly generated digital collectibles of various rarities living eternally on the Ethereum blockchain. Join our community now to learn more and be kept up-to-date on all things Yubba."
         openGraph={{
           type: "website",
           locale: "en_EN",
           url: config.app.url,
-          site_name: config.app.name,
+          site_name: `Yubba World`,
         }}
         additionalLinkTags={[
           {
             rel: "icon",
-            href: `${config.app.url}/favicon.png`,
+            href: `/favicon.png`,
           },
         ]}
       />
