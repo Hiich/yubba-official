@@ -10,7 +10,7 @@ interface Props {
 }
 
 export default function Presale({ className }: Props) {
-  const discord_link = "https://discord.com/invite/dQfwuT9FJc";
+  const discord_link = "https://discord.com/invite/yubbaworld";
 
   return (
     <div className={clsx("flex-col items-center", className)}>
