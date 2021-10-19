@@ -12,11 +12,12 @@ export default function CollectionPreview() {
         {/* <div className="w-full pr-8 md:w-7/12"> */}
         <div className="w-full pr-8">
           <p className="mt-20 text-white md:mt-7">
-            A collection of randomly generated digital collectibles of various rarities living eternally on the Ethereum blockchain.
-          </p>        
+A collection of digital collectibles living eternally on the Ethereum blockchain.          </p>        
           <p className="text-white mt-7">
-            Yubba World is populated by 10,000 unique Yubbas (no two are alike) Crafted with a staggering array of diversity each with their own characteristics and expressions to serve a role in the Yubbabian society.
-          </p>
+Yubba World is populated by 10,000 uniquely created Yubbas. The powers of
+the Yubba’s must be trained and honed. Each Yubba have been formed with
+their own characteristics, attributes and expressions, to be your trainable
+companion that can truly be unique and yours.          </p>
           <div className="mt-7 w-[240px]">
             <Link href="/preview" passHref>
               <Button variant="white" size="large" block style={{ justifyContent: "center" }}>
