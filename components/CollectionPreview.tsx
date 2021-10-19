@@ -16,8 +16,7 @@ A collection of digital collectibles living eternally on the Ethereum blockchain
           <p className="text-white mt-7">
 Yubba World is populated by 10,000 uniquely created Yubbas. The powers of
 the Yubba’s must be trained and honed. Each Yubba have been formed with
-their own characteristics, attributes and expressions, to be your trainable
-companion that can truly be unique and yours.          </p>
+their own characteristics, attributes and expressions, to be your companion that can truly be unique and yours.          </p>
           <div className="mt-7 w-[240px]">
             <Link href="/preview" passHref>
               <Button variant="white" size="large" block style={{ justifyContent: "center" }}>
