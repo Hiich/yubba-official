@@ -104,7 +104,7 @@ export default function TraitsRarity() {
             <RowTokenInfo info="10,000 Yubbas Available" />
             <RowTokenInfo info="ERC-721 Contract" />
             <RowTokenInfo info="MetaMask required for minting" />
-            <RowTokenInfo info="4% Yubba tax on secondary market sales used for the up-keeping of Yubba World" border={false} />            
+            <RowTokenInfo info="4% Yubba tax on secondary market sales used for Yubba World housekeeping" border={false} />            
           </div>
 
           <div id="#traits-rarity" className="pt-16"></div>
