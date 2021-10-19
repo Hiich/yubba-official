@@ -177,8 +177,8 @@ export default function TraitsRarity() {
                 </div>
               </div>
               
-              <RowRarity category="1. Mythical" number="5" />
-              <RowRarity category="2. Legendary" number="95" />
+              <RowRarity category="1. Mythical" number="7" />
+              <RowRarity category="2. Legendary" number="93" />
               <RowRarity category="3. Elite" number="900" />
               <RowRarity category="4. Rare" number="1,700" />
               <RowRarity category="5. Uncommon" number="3,000" />
