@@ -570,9 +570,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       </div>
                     </div>
                   </div>
-                  <div className="min-w-0 flex-1 py-1.5 ml-10 mt-3 ">
-                    <div className={styles.Line}></div>
-                  </div>
+
                 </div>
               </li>
               <li>
