@@ -467,7 +467,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                     <div className="min-w-0  pb-1.5 ">
                       <div className="">
                         <div className={styles.Rectangle}>
-                          <div className={styles.dateContenair}>Q4 2021</div>
+                          <div className={styles.dateContenair}>Q1 2022</div>
                         </div>
                       </div>
                     </div>
@@ -542,11 +542,10 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                   </div>
                 </div>
               </li>
-
-              <li>
+                   <li>
                 <div className="relative pb-3">
                   <span
-                    className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500 "
+                    className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500"
                     aria-hidden="true"
                   />
                   <div className="relative flex items-start space-x-3">
@@ -559,18 +558,20 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                       <div className="">
                         <div>
                           <span className="font-title text-secondary">
-                            Christmas edition
+                            Yubba in Japan{" "}
                           </span>
+                          <div className="w-full ">
+                            <br />
+                            Tokyo exhibition has been penned in. We are working
+                            on a very exciting collaboration deal with a well
+                            known entity.
+                          </div>
                         </div>
-                        <span className="w-full ">
-                          {" "}
-                          <br />
-                          Limited release to the collection. Expect Yubba
-                          festivities. Announcements on aquisitions will be made
-                          available shortly before the drop.{" "}
-                        </span>
                       </div>
                     </div>
+                  </div>
+                  <div className="min-w-0 flex-1 py-1.5 ml-10 mt-3 ">
+                    <div className={styles.Line}></div>
                   </div>
                 </div>
               </li>
@@ -606,44 +607,10 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                     <div className="min-w-0  pb-1.5 ">
                       <div className="">
                         <div className={styles.Rectangle}>
-                          <div className={styles.dateContenair}>Q2 2022</div>
+                          <div className={styles.dateContenair}>Q3 2022</div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div className="relative pb-3">
-                  <span
-                    className="absolute top-2 left-5 -ml-px h-full w-0.5 bg-pink-500"
-                    aria-hidden="true"
-                  />
-                  <div className="relative flex items-start space-x-3">
-                    <div>
-                      <div className="relative px-4 top-2 ">
-                        <div className="flex items-center justify-center w-2 h-2 bg-white rounded-full ring-4 ring-pink-500"></div>
-                      </div>
-                    </div>
-                    <div className="min-w-0  py-1.5 ">
-                      <div className="">
-                        <div>
-                          <span className="font-title text-secondary">
-                            Yubba in Japan{" "}
-                          </span>
-                          <div className="w-full ">
-                            <br />
-                            Tokyo exhibition has been penned in. We are working
-                            on a very exciting collaboration deal with a well
-                            known entity.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="min-w-0 flex-1 py-1.5 ml-10 mt-3 ">
-                    <div className={styles.Line}></div>
                   </div>
                 </div>
               </li>
@@ -740,7 +707,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                     <div className="min-w-0  pb-1.5 ">
                       <div className="">
                         <div className={styles.Rectangle}>
-                          <div className={styles.dateContenair}>Q3 2022</div>
+                          <div className={styles.dateContenair}>Q4 2022</div>
                         </div>
                       </div>
                     </div>
