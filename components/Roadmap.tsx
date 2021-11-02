@@ -740,7 +740,7 @@ const Roadmap = ({ children = "Loading...", className = "" }: Props) => {
                     <div className="min-w-0  pb-1.5 ">
                       <div className="">
                         <div className={styles.Rectangle}>
-                          <div className={styles.dateContenair}>Q2 2022</div>
+                          <div className={styles.dateContenair}>Q4 2022</div>
                         </div>
                       </div>
                     </div>
