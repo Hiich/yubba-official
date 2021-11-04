@@ -25,7 +25,7 @@ export const config = {
     { name: 'Team', href: '/#team' },
   ],
   socials: [
-    { name: 'Twitter', icon: TwitterIcon, link: "https://twitter.com/yubbaworld" },
+//     { name: 'Twitter', icon: TwitterIcon, link: "https://twitter.com/yubbaworld" },
     { name: 'Instagram', icon: InstagramIcon, link: "https://www.instagram.com/yubbaworld/" },
     { name: 'Discord', icon: DiscordIcon, link: "https://discord.com/invite/yubbaworld" }
   ],
