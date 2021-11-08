@@ -102,9 +102,9 @@ export default function TraitsRarity() {
           <div className="rounded pt-10 pb-10  px-16 w-full mb-28 md:w-[450px]" style={{ backgroundImage: 'linear-gradient(152deg, #473c41 10%, #342c30 79%)' }}>            
             <H2 className="text-white font-title">TOKEN INFO</H2>
             <RowTokenInfo info="10,000 Yubbas Available" />
-            <RowTokenInfo info="ERC-721 Contract" />
+            <RowTokenInfo info="ERC-1155 Contract" />
             <RowTokenInfo info="MetaMask required for minting" />
-            <RowTokenInfo info="4% Yubba tax on secondary market sales used for Yubba World housekeeping" border={false} />            
+            <RowTokenInfo info="8% Yubba tax on secondary market sales used for Yubba World housekeeping" border={false} />            
           </div>
 
           <div id="#traits-rarity" className="pt-16"></div>
