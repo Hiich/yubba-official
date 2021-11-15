@@ -35,16 +35,16 @@ export const config = {
       imageAlt: 'Vic Founder Yubba World',
       name: 'Vic',
       job: 'Creator / Artist',
-      email: 'hello@yubbaworld.net',
-      twitter: 'https://twitter.com/v_xtra',
+      email: '',
+      twitter: '',
     },
     {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Founder Yubba World',
       name: 'Hich',
       job: 'Chief Engineer',
-      email: 'admin@yubbaworld.net',
-      twitter: 'https://twitter.com/HichamBenhima',
+      email: '',
+      twitter: '',
     }
   ],
   investors: [
