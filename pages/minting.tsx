@@ -1,13 +1,13 @@
-import type { NextPage } from "next";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { NextSeo as SEO } from "next-seo";
-import { useRouter } from "next/router";
-import styles from "./styles.module.css";
-import { Provider, RootStateOrAny } from "react-redux";
-import { connect } from "../redux/blockchain/blockchainActions";
-import { fetchData } from "../redux/data/dataActions";
-import { useDispatch, useSelector } from "react-redux";
+import type { NextPage } from 'next'
+import React, { useEffect, useState } from 'react'
+import Image from 'next/image'
+import { NextSeo as SEO } from 'next-seo'
+import { useRouter } from 'next/router'
+import styles from './styles.module.css'
+import { Provider, RootStateOrAny } from 'react-redux'
+import { connect } from '../redux/blockchain/blockchainActions'
+import { fetchData } from '../redux/data/dataActions'
+import { useDispatch, useSelector } from 'react-redux'
 
 import {
   Button,
@@ -20,156 +20,155 @@ import {
   MintingCard,
   MyWalletPopup,
   Navigation,
-} from "@/components";
+} from '@/components'
 
-const desktopLinks = [{ name: "Minting", href: "/minting" }];
+const desktopLinks = [{ name: 'Minting', href: '/minting' }]
+let mintCounter: number = 0
 
 const MintingPage: NextPage = () => {
-  const [showConnect, setConnect] = useState(false);
-  const [showWallet, setShowWallet] = useState(false);
-  const [myWallet, setMyWallet] = useState(true);
-  const [selectedValue, setSelectedValue] = useState(1);
-  const [walletAddress, setWalletAddress] = useState("OxOO");
-  const [claimingStatus, setClaimingStatus] = useState("Connect");
+  const [showConnect, setConnect] = useState(false)
+  const [showWallet, setShowWallet] = useState(false)
+  const [myWallet, setMyWallet] = useState(true)
+  const [selectedValue, setSelectedValue] = useState(1)
+  const [walletAddress, setWalletAddress] = useState('OxOO')
+  const [claimingStatus, setClaimingStatus] = useState('Connect')
+  const [mintCounter, setMintCounter] = useState(1)
 
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: "0x6818DAe5505A13C3E7369bfA9E408AD8919C6D82",
-    SCAN_LINK: "",
+    CONTRACT_ADDRESS: '0x164ADF60c708866A613A77494932898F7347d067',
+    SCAN_LINK: '',
     NETWORK: {
-      NAME: "Ethereum",
-      SYMBOL: "ETH",
+      NAME: 'Ethereum',
+      SYMBOL: 'ETH',
       ID: 4,
     },
-    NFT_NAME: "Yubba World",
-    SYMBOL: "YB",
-    MAX_SUPPLY: 9500,
-    WEI_COST: 300000000000000000,
-    DISPLAY_COST: 0.3,
+    NFT_NAME: 'Yubba World',
+    SYMBOL: 'YB',
+    MAX_SUPPLY: 500,
+    WEI_COST: 50000000000000000,
+    DISPLAY_COST: 0.07,
     GAS_LIMIT: 285000,
-    MARKETPLACE: "Opensea",
-    MARKETPLACE_LINK: "",
+    MARKETPLACE: 'Opensea',
+    MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
-  });
+  })
 
-  let cost = CONFIG.WEI_COST;
-  let gasLimit = CONFIG.GAS_LIMIT;
+  let cost = CONFIG.WEI_COST
+  let gasLimit = CONFIG.GAS_LIMIT
 
-  const dispatch = useDispatch();
-  const blockchain = useSelector((state: RootStateOrAny) => state.blockchain);
-  const data = useSelector((state: RootStateOrAny) => state.data);
+  const dispatch = useDispatch()
+  const blockchain = useSelector((state: RootStateOrAny) => state.blockchain)
+  const data = useSelector((state: RootStateOrAny) => state.data)
 
   // === demo purpose - start
-  const router = useRouter();
-  const showWalletConnected = String(router.query.walletConnected);
+  const router = useRouter()
+  const showWalletConnected = String(router.query.walletConnected)
   useEffect(() => {
-    if (showWalletConnected === "yes") setMyWallet(true);
-  }, [showWalletConnected]);
+    if (showWalletConnected === 'yes') setMyWallet(true)
+  }, [showWalletConnected])
 
   // useEffect(() => {
   //   dispatch(connect())});
   // === demo purpose - end
 
   function showMyWallet() {
-    setWalletAddress(blockchain.account);
-    setShowWallet(true);
+    setWalletAddress(blockchain.account)
+    setShowWallet(true)
   }
 
   function hideMyWallet() {
-    setShowWallet(false);
+    setShowWallet(false)
   }
 
   function showConnectWallet() {
-    setConnect(true);
+    setConnect(true)
   }
 
   function hideConnectWallet() {
-    setConnect(false);
+    setConnect(false)
   }
 
   function onClickDisconnectWallet() {
-    setMyWallet(true);
-    setClaimingStatus("Connect");
+    setMyWallet(true)
+    setClaimingStatus('Connect')
   }
 
   function onConnectMetamask() {
-    console.log("click connect metamask");
-    dispatch(connect());
-    setMyWallet(false);
-    setClaimingStatus("Begin");
+    console.log('click connect metamask')
+    dispatch(connect())
+    setMyWallet(false)
+    if (mintCounter == CONFIG.MAX_SUPPLY) setClaimingStatus('Sold out')
+    else setClaimingStatus('Begin')
   }
 
   function onConnectWalletConnect() {
-    console.log("click connect wallet connect");
-    setMyWallet(true);
+    console.log('click connect wallet connect')
+    setMyWallet(true)
   }
 
   function onConnectTustWallet() {
-    console.log("click trust wallet");
-    setMyWallet(true);
+    console.log('click trust wallet')
+    setMyWallet(true)
   }
 
   const getData = () => {
-    if (blockchain.account !== "" && blockchain.smartContract !== null) {
-      dispatch(fetchData());
+    if (blockchain.account !== '' && blockchain.smartContract !== null) {
+      dispatch(fetchData())
     }
-  };
+  }
+
+  const incrementMintAmount = (mintAmount: number) => {
+    let newMintAmount = mintCounter + mintAmount
+    if (newMintAmount > CONFIG.MAX_SUPPLY) {
+      newMintAmount = CONFIG.MAX_SUPPLY
+      setClaimingStatus('Sold out')
+    }
+    setMintCounter(newMintAmount)
+  }
 
   const claimNFTs = (mintAmount: number, whitelist: boolean) => {
-    let cost = CONFIG.WEI_COST;
-    let gasLimit = CONFIG.GAS_LIMIT;
-    let totalCostWei = String(cost * mintAmount);
-    let totalGasLimit = String(gasLimit * mintAmount);
-    console.log("Cost: ", totalCostWei);
-    console.log("Gas limit: ", totalGasLimit);
-    setClaimingStatus("Minting");
-    if (whitelist === false) {
-      blockchain.smartContract.methods
-        .mint(blockchain.account, mintAmount)
-        .send({
-          gasLimit: String(totalGasLimit),
-          to: CONFIG.CONTRACT_ADDRESS,
-          from: blockchain.account,
-          value: totalCostWei,
-        })
-        .once("error", (err: any) => {
-          console.log(err);
-          setClaimingStatus("Begin");
-        })
-        .then((receipt: any) => {
-          console.log(receipt);
-          // setClaimingNft(false);
-          setClaimingStatus("Done");
-          dispatch(fetchData());
-        });
-    } else {
-      blockchain.smartContract.methods
-        .freeMint(blockchain.account, mintAmount)
-        .send({
-          gasLimit: String(totalGasLimit),
-          to: CONFIG.CONTRACT_ADDRESS,
-          from: blockchain.account,
-          // value: totalCostWei,
-        })
-        .once("error", (err: any) => {
-          console.log(err);
-          setClaimingStatus("Begin");
-        })
-        .then((receipt: any) => {
-          console.log(receipt);
-          // setClaimingNft(false);
-          setClaimingStatus("Done");
-          dispatch(fetchData());
-        });
+    let cost = CONFIG.WEI_COST
+    let gasLimit = CONFIG.GAS_LIMIT
+    let totalCostWei = String(cost * mintAmount)
+    let totalGasLimit = String(gasLimit * mintAmount)
+    console.log('Cost: ', totalCostWei)
+    console.log('Gas limit: ', totalGasLimit)
+    setClaimingStatus('Minting')
+    if (whitelist == true) {
+      totalCostWei = String(0)
+      mintAmount = data.whitelist
     }
-  };
+    blockchain.smartContract.methods
+      .mint(blockchain.account, mintAmount, 1)
+      .send({
+        gasLimit: String(totalGasLimit),
+        to: CONFIG.CONTRACT_ADDRESS,
+        from: blockchain.account,
+        value: totalCostWei,
+      })
+      .once('error', (err: any) => {
+        console.log(err)
+        setClaimingStatus('Error')
+      })
+      .then((receipt: any) => {
+        console.log(receipt)
+        // setClaimingNft(false);
+        setClaimingStatus('Done')
+        dispatch(fetchData())
+        incrementMintAmount(mintAmount)
+        console.log(mintCounter)
+      })
+
+    if (mintCounter == CONFIG.MAX_SUPPLY) setClaimingStatus('Sold out')
+  }
 
   useEffect(() => {
-    getData();
-  }, [blockchain.account]);
+    getData()
+  }, [blockchain.account])
 
   const handleChange = (e: any) => {
-    setSelectedValue(e.target.value);
-  };
+    setSelectedValue(e.target.value)
+  }
 
   return (
     <div className="h-screen bg-center bg-repeat-x bg-cover bg-bubble">
@@ -182,7 +181,7 @@ const MintingPage: NextPage = () => {
         desktopLinks={desktopLinks}
         action={
           myWallet ? (
-            <ButtonConnectWallet onClick={showConnectWallet} />
+            <ButtonConnectWallet onClick={onConnectMetamask} />
           ) : (
             <ButtonWallet
               onClickMyWallet={showMyWallet}
@@ -218,15 +217,33 @@ const MintingPage: NextPage = () => {
             </div>
           </MintingCard> */}
           {/* minting card fom */}
-          {claimingStatus === "Connect" ? (
+          {blockchain.account === '' ||
+          blockchain.smartContract === null ||
+          claimingStatus == 'Connect' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
-                Please connect your wallet first !
+                Please connect your wallet to Ethereum Mainnet first !
               </div>
             </MintingCard>
           ) : null}
-
-          {claimingStatus === "Begin" ? (
+          {claimingStatus == 'Error' ? (
+            <MintingCard>
+              <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
+                Transaction was either canceled or an error occured. Please
+                contact our support in discord.
+              </div>
+            </MintingCard>
+          ) : null}
+          {claimingStatus == 'Sold out' ? (
+            <MintingCard>
+              <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
+                We are sold out ! You can check all Yubbas in secondary market
+                on
+                <a href="https://opensea.io/collection/yubbaworld"> Opensea</a>
+              </div>
+            </MintingCard>
+          ) : null}
+          {claimingStatus === 'Begin' ? (
             <MintingCard>
               {data.whitelist > 0 ? (
                 <>
@@ -236,22 +253,22 @@ const MintingPage: NextPage = () => {
                   </p>
                   <div
                     className="w-full pb-6 text-right "
-                    style={{ borderBottom: "dotted 0.3px #a6a5a5" }}
+                    style={{ borderBottom: 'dotted 0.3px #a6a5a5' }}
                   ></div>
                   <div className="w-full  mx-auto mt-6 md:w-3/4">
                     <Button
                       variant="primary"
                       className="rounded-full py-3 px-6 "
                       style={{
-                        justifyContent: "center",
-                        fontWeight: "lighter",
-                        height: "40px",
-                        color: "#fffeff",
+                        justifyContent: 'center',
+                        fontWeight: 'lighter',
+                        height: '40px',
+                        color: '#fffeff',
                       }}
                       onClick={(e) => {
-                        e.preventDefault();
-                        claimNFTs(data.whitelist, true);
-                        getData();
+                        e.preventDefault()
+                        claimNFTs(data.whitelist, true)
+                        getData()
                       }}
                     >
                       Give me my Yubbas
@@ -265,11 +282,11 @@ const MintingPage: NextPage = () => {
                   </p>
                   <div
                     className="w-full pb-6 text-right "
-                    style={{ borderBottom: "dotted 0.3px #a6a5a5" }}
+                    style={{ borderBottom: 'dotted 0.3px #a6a5a5' }}
                   >
                     <div
                       className="w-full h-9  -ml-0"
-                      style={{ justifyContent: "center" }}
+                      style={{ justifyContent: 'center' }}
                     >
                       <div className={styles.selectdiv}>
                         <label>
@@ -279,19 +296,14 @@ const MintingPage: NextPage = () => {
                             <option>3</option>
                             <option>4</option>
                             <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
                           </select>
                         </label>
                       </div>
                     </div>
                     <div>
                       <p className="mb-2 mt-4 text-secondary text-xs font-thin text-right">
-                        {CONFIG.MAX_SUPPLY - data.totalSupply} remaining <br />
-                        Price per Yubba: {CONFIG.DISPLAY_COST}{" "}
+                        {CONFIG.MAX_SUPPLY - mintCounter} remaining <br />
+                        Price per Yubba: {CONFIG.DISPLAY_COST}{' '}
                         {CONFIG.NETWORK.SYMBOL}
                       </p>
                     </div>
@@ -302,7 +314,7 @@ const MintingPage: NextPage = () => {
                     </div>
                     <div className="flex-1 font-title text-2xl text-right">
                       <span className="pr-1">
-                        {(CONFIG.DISPLAY_COST * selectedValue).toFixed(1)}
+                        {(CONFIG.DISPLAY_COST * selectedValue).toFixed(2)}
                       </span>
                       <Image
                         src="/icon-eth.png"
@@ -318,15 +330,15 @@ const MintingPage: NextPage = () => {
                       variant="primary"
                       className="rounded-full py-3 px-6 "
                       style={{
-                        justifyContent: "center",
-                        fontWeight: "lighter",
-                        height: "40px",
-                        color: "#fffeff",
+                        justifyContent: 'center',
+                        fontWeight: 'lighter',
+                        height: '40px',
+                        color: '#fffeff',
                       }}
                       onClick={(e) => {
-                        e.preventDefault();
-                        claimNFTs(selectedValue, false);
-                        getData();
+                        e.preventDefault()
+                        claimNFTs(selectedValue, false)
+                        getData()
                       }}
                     >
                       Get me some Yubbas
@@ -336,7 +348,7 @@ const MintingPage: NextPage = () => {
               )}
             </MintingCard>
           ) : null}
-          {claimingStatus === "Minting" ? (
+          {claimingStatus === 'Minting' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
                 Transfering Yubbas <br /> to your wallet
@@ -368,7 +380,7 @@ const MintingPage: NextPage = () => {
             </MintingCard>
           ) : null}
 
-          {claimingStatus === "Done" ? (
+          {claimingStatus === 'Done' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
                 Transfer complete <br />
@@ -403,7 +415,7 @@ const MintingPage: NextPage = () => {
         </p>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default MintingPage;
+export default MintingPage
