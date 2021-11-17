@@ -247,10 +247,12 @@ const MintingPage: NextPage = () => {
             <MintingCard>
               {data.whitelist > 0 ? (
                 <>
-                  <p className="mb-6 md:mt-0 -mt-6 text-xl text-left font-bold text-secondary">
+                  <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
                     Congratulations, you can claim {data.whitelist} free Yubbas
                     !
-                  </p>
+                    <br />
+                    <br /> Yubba dubba dooo… 🎉
+                  </div>
                   <div
                     className="w-full pb-6 text-right "
                     style={{ borderBottom: 'dotted 0.3px #a6a5a5' }}
