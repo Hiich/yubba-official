@@ -6,7 +6,7 @@ export const Team = () => {
   const { founders, investors } = config
 
   const founder1 = founders[0]
-  const founder2 = founders[1]
+ 
 
   const investor1 = investors[0]
   const investor2 = investors[1]
@@ -27,7 +27,6 @@ export const Team = () => {
           
           <div className="grid grid-cols-1 gap-10 md:grid-cols-4">
             <Teammate {...founder1} className="md:col-start-2" />
-            <Teammate {...founder2} className="md:col-start-3" />  
           </div>
 
           <H2 className="mt-16 mb-8 text-secondary">Investors & Advisors</H2>
