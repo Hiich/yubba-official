@@ -31,18 +31,10 @@ export const config = {
   ],
   founders: [
     {
-      imageUrl: '/profile/profile-vic.png',
-      imageAlt: 'Vic Founder Yubba World',
-      name: 'Vic',
-      job: 'Creator / Artist',
-      email: '',
-      twitter: '',
-    },
-    {
       imageUrl: '/profile/profile-hicham.png',
       imageAlt: 'Hich Founder Yubba World',
       name: 'Hich',
-      job: 'Chief Engineer',
+      job: 'Creator / Tech Lead',
       email: '',
       twitter: '',
     }
