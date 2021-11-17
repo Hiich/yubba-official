@@ -35,12 +35,12 @@ const MintingPage: NextPage = () => {
   const [mintCounter, setMintCounter] = useState(1)
 
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: '0x164ADF60c708866A613A77494932898F7347d067',
+    CONTRACT_ADDRESS: '0x3b3Dc7b2c70aA7d81a062f5cF021E73a2F19E199',
     SCAN_LINK: '',
     NETWORK: {
       NAME: 'Ethereum',
       SYMBOL: 'ETH',
-      ID: 4,
+      ID: 1,
     },
     NFT_NAME: 'Yubba World',
     SYMBOL: 'YB',
