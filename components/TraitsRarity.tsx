@@ -232,21 +232,21 @@ export default function TraitsRarity() {
             </div>
 
             {/* rarity distribution */}
-            <div className="w-full sm:w-1/2">
+            {/* <div className="w-full sm:w-1/2">
               <div className="mb-4 text-xl font-bold">Rarity distribution</div>
 
               <div className="flex items-center h-10 border-dotted border-b-[1px] border-[#342c30]">
                 <div className="flex flex-1 w-full">Rarity categories</div>
                 <div className="flex">No. of Yubbas</div>
-              </div>
+              </div> */}
 
-              {/* <RowRarity category="1. Mythical" number="7" />
+            {/* <RowRarity category="1. Mythical" number="7" />
               <RowRarity category="2. Legendary" number="93" />
               <RowRarity category="3. Elite" number="900" />
               <RowRarity category="4. Rare" number="1,700" />
               <RowRarity category="5. Uncommon" number="3,000" />
               <RowRarity category="6. Common" number="4,300" />                                                                          */}
-            </div>
+            {/* </div> */}
           </div>
         </Container>
       </section>
