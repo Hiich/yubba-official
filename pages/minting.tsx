@@ -32,7 +32,7 @@ const MintingPage: NextPage = () => {
   const [selectedValue, setSelectedValue] = useState(1)
   const [walletAddress, setWalletAddress] = useState('OxOO')
   const [claimingStatus, setClaimingStatus] = useState('Connect')
-  const [mintCounter, setMintCounter] = useState(1)
+  const [mintCounter, setMintCounter] = useState(0)
 
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: '0x164ADF60c708866A613A77494932898F7347d067',
@@ -45,9 +45,9 @@ const MintingPage: NextPage = () => {
     NFT_NAME: 'Yubba World',
     SYMBOL: 'YB',
     MAX_SUPPLY: 500,
-    WEI_COST: 50000000000000000,
+    WEI_COST: 70000000000000000,
     DISPLAY_COST: 0.07,
-    GAS_LIMIT: 285000,
+    GAS_LIMIT: 100000,
     MARKETPLACE: 'Opensea',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
