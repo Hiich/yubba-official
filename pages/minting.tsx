@@ -31,7 +31,7 @@ const MintingPage: NextPage = () => {
   const [myWallet, setMyWallet] = useState(true)
   const [selectedValue, setSelectedValue] = useState(1)
   const [walletAddress, setWalletAddress] = useState('OxOO')
-  const [claimingStatus, setClaimingStatus] = useState('Connect')
+  const [claimingStatus, setClaimingStatus] = useState('Countdown')
   const [mintCounter, setMintCounter] = useState(0)
 
   const [CONFIG, SET_CONFIG] = useState({
@@ -175,17 +175,17 @@ const MintingPage: NextPage = () => {
 
       <Navigation
         desktopLinks={desktopLinks}
-        // action={<></>}
-        action={
-          myWallet ? (
-            <ButtonConnectWallet onClick={onConnectMetamask} />
-          ) : (
-            <ButtonWallet
-              onClickMyWallet={showMyWallet}
-              onClickDisconnectWallet={onClickDisconnectWallet}
-            />
-          )
-        }
+        action={<></>}
+        // action={
+        //   myWallet ? (
+        //     <ButtonConnectWallet onClick={onConnectMetamask} />
+        //   ) : (
+        //     <ButtonWallet
+        //       onClickMyWallet={showMyWallet}
+        //       onClickDisconnectWallet={onClickDisconnectWallet}
+        //     />
+        //   )
+        // }
       />
 
       <section className="py-8 pt-20">
@@ -199,7 +199,7 @@ const MintingPage: NextPage = () => {
             />
           </div>
           {/* minting card for countdown */}
-          {/* {claimingStatus == 'Countdown' ? (
+          {claimingStatus == 'Countdown' ? (
             <MintingCard>
               <p className="text-lg">Yubba minting will start at </p>
               <p className="mt-5 mb-8 text-3xl">
@@ -210,11 +210,11 @@ const MintingPage: NextPage = () => {
                 <ButtonWaiting block />
               </div>
             </MintingCard>
-          ) : null} */}
+          ) : null}
           {/* minting card fom */}
-          {blockchain.account === '' ||
-          blockchain.smartContract === null ||
-          claimingStatus == 'Connect' ? (
+          {/* {blockchain.account === '' ||
+          blockchain.smartContract === null || */}
+          {claimingStatus == 'Connect' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
                 Please connect your wallet to Ethereum Mainnet with Metamask
