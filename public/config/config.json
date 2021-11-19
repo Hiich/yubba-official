@@ -1,5 +1,5 @@
 {
-  "CONTRACT_ADDRESS": "0x3b3Dc7b2c70aA7d81a062f5cF021E73a2F19E199",
+  "CONTRACT_ADDRESS": "0x164ADF60c708866A613A77494932898F7347d067",
   "SCAN_LINK": "https://rinkeby.etherscan.io/token/0x3b3Dc7b2c70aA7d81a062f5cF021E73a2F19E199",
   "NETWORK": {
     "NAME": "Ethereum",
@@ -11,7 +11,7 @@
   "MAX_SUPPLY": 10,
   "WEI_COST": 300000000000000000,
   "DISPLAY_COST": 0.3,
-  "GAS_LIMIT": 285000,
+  "GAS_LIMIT": 100000,
   "MARKETPLACE": "Opensea",
   "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/yubbaworld",
   "SHOW_BACKGROUND": true
