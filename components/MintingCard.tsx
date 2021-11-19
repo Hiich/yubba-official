@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import LockIcon from '@/public/icon-lock.svg'
 import { Button } from '@/components'
 import { useRouter } from 'next/router'
+
 export const MintingCard: FC<{}> = ({ children }) => {
   const router = useRouter()
   return (

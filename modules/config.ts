@@ -15,6 +15,7 @@ export const config = {
     { name: 'Community', href: '#community' },
     { name: 'Roadmap', href: '#roadmap' },
     { name: 'Team', href: '#team' },
+    { name: 'Mint', href: '/minting'}
   ],
   otherPageLinks: [
     { name: 'The collection', href: '/#the-collection' },

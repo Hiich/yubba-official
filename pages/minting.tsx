@@ -67,10 +67,6 @@ const MintingPage: NextPage = () => {
     if (showWalletConnected === 'yes') setMyWallet(true)
   }, [showWalletConnected])
 
-  // useEffect(() => {
-  //   dispatch(connect())});
-  // === demo purpose - end
-
   function showMyWallet() {
     setWalletAddress(blockchain.account)
     setShowWallet(true)
@@ -179,6 +175,7 @@ const MintingPage: NextPage = () => {
 
       <Navigation
         desktopLinks={desktopLinks}
+        // action={<></>}
         action={
           myWallet ? (
             <ButtonConnectWallet onClick={onConnectMetamask} />
@@ -202,27 +199,26 @@ const MintingPage: NextPage = () => {
             />
           </div>
           {/* minting card for countdown */}
-          {/* <MintingCard>
-            <p className="text-lg">
-              Yubba minting will start in
-            </p>
-            <p className="mt-5 mb-8 text-3xl">
-              <span className="font-bold">00 : 00 :</span> 45
-            </p>
-            <p className="mb-2 text-xs font-thin">
-              Price per Yubba 0.05 ETH
-            </p>
-            <div className="w-full mx-auto md:w-3/4">
-              <ButtonWaiting block />
-            </div>
-          </MintingCard> */}
+          {/* {claimingStatus == 'Countdown' ? (
+            <MintingCard>
+              <p className="text-lg">Yubba minting will start at </p>
+              <p className="mt-5 mb-8 text-3xl">
+                <span className="font-bold">6 pm</span> UTC
+              </p>
+              <p className="mb-2 text-xs font-thin">Price per Yubba 0.07 ETH</p>
+              <div className="w-full mx-auto md:w-3/4">
+                <ButtonWaiting block />
+              </div>
+            </MintingCard>
+          ) : null} */}
           {/* minting card fom */}
           {blockchain.account === '' ||
           blockchain.smartContract === null ||
           claimingStatus == 'Connect' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
-                Please connect your wallet to Ethereum Mainnet first !
+                Please connect your wallet to Ethereum Mainnet with Metamask
+                first !
               </div>
             </MintingCard>
           ) : null}
@@ -243,7 +239,7 @@ const MintingPage: NextPage = () => {
               </div>
             </MintingCard>
           ) : null}
-          {claimingStatus === 'Begin' ? (
+          {claimingStatus === 'Begin' && blockchain.account != null ? (
             <MintingCard>
               {data.whitelist > 0 ? (
                 <>

@@ -39,7 +39,7 @@ export default function Presale({ className }: Props) {
         </p>
 
         <div className="mt-7">
-          <a href={discord_link} target="_blank" rel="noreferrer">
+          <a href="/minting" rel="noreferrer">
             <Button
               variant="primary"
               size="large"
