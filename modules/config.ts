@@ -14,9 +14,8 @@ export const config = {
     { name: 'Traits & Rarities', href: '#traits-rarity' },
     { name: 'Community', href: '#community' },
     { name: 'Roadmap', href: '#roadmap' },
-    { name: 'Team', href: '#team' },
-    { name: 'Mint', href: '/minting'}
-  ],
+    { name: 'Team', href: '#team' }
+    ],
   otherPageLinks: [
     { name: 'The collection', href: '/#the-collection' },
     { name: 'Collection preview', href: '/preview' },

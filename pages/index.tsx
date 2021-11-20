@@ -12,7 +12,7 @@ import {
   SeriesOne,
   Roadmap,
   Community,
-  Presale, 
+  Presale,
   Team,
   TraitRarity,
   Button,
@@ -20,27 +20,24 @@ import {
 
 const IndexPage: NextPage = () => {
   useEffect(() => {
-    let url = window.location.href.split('#');
+    let url = window.location.href.split('#')
     if (url) {
-      let e = document.getElementById('#' + url[1]);
-      if(e)  window.scrollTo({ top: e.offsetTop, behavior: "smooth" });
+      let e = document.getElementById('#' + url[1])
+      if (e) window.scrollTo({ top: e.offsetTop, behavior: 'smooth' })
     }
   }, [])
 
   return (
     <>
       <SEO />
-      <Navigation      
+      <Navigation
         action={
-                    <></>
-          // <Link href="/minting" passHref>
-          //   <Button variant="primary">
-          //     Get minting
-          //   </Button>
-          // </Link>
+          <Link href="/minting" passHref>
+            <Button variant="primary">Mint</Button>
+          </Link>
         }
       />
-      
+
       <div className="py-[55px]">
         <Hero />
 
