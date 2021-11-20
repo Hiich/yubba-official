@@ -48,7 +48,7 @@ const MintingPage: NextPage = () => {
     WEI_COST: 70000000000000000,
     DISPLAY_COST: 0.07,
     GAS_LIMIT: 100000,
-    MARKETPLACE: 'https://opensea.io/collection/yubbaworld',
+    MARKETPLACE: 'https://opensea.io/collection/yubbaworld  ',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
   })
@@ -301,7 +301,7 @@ const MintingPage: NextPage = () => {
                     </div>
                     <div>
                       <p className="mb-2 mt-4 text-secondary text-xs font-thin text-right">
-                        {CONFIG.MAX_SUPPLY - mintCounter} remaining <br />
+                        {/* {CONFIG.MAX_SUPPLY - mintCounter} remaining <br /> */}
                         Price per Yubba: {CONFIG.DISPLAY_COST}{' '}
                         {CONFIG.NETWORK.SYMBOL}
                       </p>
