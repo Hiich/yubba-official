@@ -133,7 +133,7 @@ const MintingPage: NextPage = () => {
     if (whitelist == true) {
       totalCostWei = String(0)
       mintAmount = data.whitelist
-      if (mintAmount <= 5) mintAmount = 5
+      if (mintAmount > 5) mintAmount = 5
     }
     blockchain.smartContract.methods
       .mint(blockchain.account, mintAmount, 1)
