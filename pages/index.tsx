@@ -33,7 +33,7 @@ const IndexPage: NextPage = () => {
       <Navigation
         action={
           <Link href="/minting" passHref>
-            <Button variant="primary">Mint</Button>
+            <Button variant="primary">Get minting</Button>
           </Link>
         }
       />
