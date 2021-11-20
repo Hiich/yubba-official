@@ -47,7 +47,7 @@ const MintingPage: NextPage = () => {
     MAX_SUPPLY: 500,
     WEI_COST: 70000000000000000,
     DISPLAY_COST: 0.07,
-    GAS_LIMIT: 100000,
+    GAS_LIMIT: 150000,
     MARKETPLACE: 'https://opensea.io/collection/yubbaworld  ',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
