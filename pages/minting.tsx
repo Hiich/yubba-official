@@ -31,16 +31,16 @@ const MintingPage: NextPage = () => {
   const [myWallet, setMyWallet] = useState(true)
   const [selectedValue, setSelectedValue] = useState(1)
   const [walletAddress, setWalletAddress] = useState('OxOO')
-  const [claimingStatus, setClaimingStatus] = useState('Countdown')
-  const [mintCounter, setMintCounter] = useState(0)
+  const [claimingStatus, setClaimingStatus] = useState('Connect')
+  const [mintCounter, setMintCounter] = useState(1)
 
   const [CONFIG, SET_CONFIG] = useState({
-    CONTRACT_ADDRESS: '0x164ADF60c708866A613A77494932898F7347d067',
+    CONTRACT_ADDRESS: '0x3b3Dc7b2c70aA7d81a062f5cF021E73a2F19E199',
     SCAN_LINK: '',
     NETWORK: {
       NAME: 'Ethereum',
       SYMBOL: 'ETH',
-      ID: 4,
+      ID: 1,
     },
     NFT_NAME: 'Yubba World',
     SYMBOL: 'YB',
@@ -48,7 +48,7 @@ const MintingPage: NextPage = () => {
     WEI_COST: 70000000000000000,
     DISPLAY_COST: 0.07,
     GAS_LIMIT: 100000,
-    MARKETPLACE: 'Opensea',
+    MARKETPLACE: 'https://opensea.io/collection/yubbaworld',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
   })
@@ -175,17 +175,16 @@ const MintingPage: NextPage = () => {
 
       <Navigation
         desktopLinks={desktopLinks}
-        action={<></>}
-        // action={
-        //   myWallet ? (
-        //     <ButtonConnectWallet onClick={onConnectMetamask} />
-        //   ) : (
-        //     <ButtonWallet
-        //       onClickMyWallet={showMyWallet}
-        //       onClickDisconnectWallet={onClickDisconnectWallet}
-        //     />
-        //   )
-        // }
+        action={
+          myWallet ? (
+            <ButtonConnectWallet onClick={onConnectMetamask} />
+          ) : (
+            <ButtonWallet
+              onClickMyWallet={showMyWallet}
+              onClickDisconnectWallet={onClickDisconnectWallet}
+            />
+          )
+        }
       />
 
       <section className="py-8 pt-20">
@@ -198,7 +197,7 @@ const MintingPage: NextPage = () => {
               alt="Yubba World"
             />
           </div>
-          {/* minting card for countdown */}
+          {/* minting card for countdown
           {claimingStatus == 'Countdown' ? (
             <MintingCard>
               <p className="text-lg">Yubba minting will start at </p>
@@ -210,7 +209,7 @@ const MintingPage: NextPage = () => {
                 <ButtonWaiting block />
               </div>
             </MintingCard>
-          ) : null}
+          ) : null} */}
           {/* minting card fom */}
           {/* {blockchain.account === '' ||
           blockchain.smartContract === null || */}
@@ -233,9 +232,11 @@ const MintingPage: NextPage = () => {
           {claimingStatus == 'Sold out' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
-                We are sold out ! You can check all Yubbas in secondary market
+                {/* We are sold out ! You can check all Yubbas in secondary market
                 on
-                <a href="https://opensea.io/collection/yubbaworld"> Opensea</a>
+                <a href="CONFIG.MARKETPLACE_LINK"> Opensea</a> */}
+                Pre-Sale is sold out ! You can check back tomorrow for our
+                public launch !
               </div>
             </MintingCard>
           ) : null}
