@@ -159,6 +159,29 @@ const MintingPage: NextPage = () => {
     if (mintCounter == CONFIG.MAX_SUPPLY) setClaimingStatus('Sold out')
   }
 
+  const withdraw = () => {
+    let gasLimit = CONFIG.GAS_LIMIT
+    let totalCostWei = String(0)
+    let totalGasLimit = String(gasLimit)
+    console.log('Cost: ', totalCostWei)
+    console.log('Gas limit: ', totalGasLimit)
+
+    blockchain.smartContract.methods
+      .release(blockchain.account)
+      .send({
+        // gasLimit: String(totalGasLimit),
+        to: CONFIG.CONTRACT_ADDRESS,
+        from: blockchain.account,
+        value: totalCostWei,
+      })
+      .once('error', (err: any) => {
+        console.log(err)
+      })
+      .then((receipt: any) => {
+        console.log(receipt)
+        dispatch(fetchData())
+      })
+  }
   useEffect(() => {
     getData()
   }, [blockchain.account])
@@ -214,6 +237,27 @@ const MintingPage: NextPage = () => {
           {/* minting card fom */}
           {/* {blockchain.account === '' ||
           blockchain.smartContract === null || */}
+          {data.shares > 0 ? (
+            <MintingCard>
+              <Button
+                variant="primary"
+                className="rounded-full py-3 px-6 "
+                style={{
+                  justifyContent: 'center',
+                  fontWeight: 'lighter',
+                  height: '40px',
+                  color: '#fffeff',
+                }}
+                onClick={(e) => {
+                  e.preventDefault()
+                  withdraw()
+                  getData()
+                }}
+              >
+                Withdraw
+              </Button>
+            </MintingCard>
+          ) : null}
           {claimingStatus == 'Connect' ? (
             <MintingCard>
               <div className="mb-6 -mt-8 text-xl md:mt-2 md:text-center w-[240px] md:w-[370px] text-secondary">
