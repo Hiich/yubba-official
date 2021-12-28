@@ -49,8 +49,6 @@ const IndexPage: NextPage = () => {
 
         <Community />
 
-        <Roadmap />
-
         <Team />
 
         <Footer />
