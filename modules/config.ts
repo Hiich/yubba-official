@@ -13,7 +13,6 @@ export const config = {
     { name: 'Collection preview', href: '/preview' },
     { name: 'Traits & Rarities', href: '#traits-rarity' },
     { name: 'Community', href: '#community' },
-    { name: 'Roadmap', href: '#roadmap' },
     { name: 'Team', href: '#team' }
     ],
   otherPageLinks: [
